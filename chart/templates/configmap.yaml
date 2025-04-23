@@ -5,6 +5,8 @@ metadata:
   labels:
   {{- include "smithery.labels" . | nindent 4 }}
 data:
+  PORT: "{{ .Values.service.port }}"
+  AUTHN_NAMESPACE: {{ .Release.Namespace }}
   {{- range $key, $value := .Values.env }}
   {{ $key }}: {{ $value | quote }}
   {{- end }}

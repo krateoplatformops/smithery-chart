@@ -123,3 +123,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env:
+  DEBUG: true
+  BLIZZARD: false
