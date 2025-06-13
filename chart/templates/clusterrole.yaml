@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: {{ include "smithery.fullname" . }}
+  name: {{ include "smithery.fullname" . }}-{{ .Release.Namespace }}
   labels:
     {{- include "smithery.labels" . | nindent 4 }}
 rules:
